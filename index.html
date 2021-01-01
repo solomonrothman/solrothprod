@@ -23,34 +23,64 @@
         .main-content{
             text-align: center;
         }
+
+        .main-logo{
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .sliding-background {
+            background: url("images/top-banner-sol-roth.png") repeat-x;
+            height: 635px;
+            width: 7356px; /* The image width times 3 */
+            animation: slide 120s linear infinite;
+            text-align: center;
+        }
+
+        .header-container{
+            overflow: hidden;
+            text-align: center;
+        }
+
+        @keyframes slide {
+            0%{
+                transform: translate3d(0, 0, 0);
+            }
+            100%{
+                transform: translate3d(-2452px, 0, 0); /* The image width */
+            }
+        }
+
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
     <script src="https://kit.fontawesome.com/ff90df295a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="main-content" style='background-image: url("images/sol-roth-cover.jpg"); background-size: contain; background-position-x: center; background-position-y: top; background-repeat: no-repeat; width: 100vw; height: 100vh; min-height: 100%;'>
-
-        <!-- Logo -->
-        <div style='margin-left: auto; margin-right: auto; width: 400px; height: 200px; background-image: url("images/sol-roth-logo.png"); background-size: contain; background-position-x: center; background-position-y: top; background-repeat: no-repeat;'>
-        </div>
 
 
-        <div id="social-links-center" class="text-center">
-            <span>Sol Roth Productions | 805-827-2484 | <a href="mailto:solroth001@gmail.com">solroth001@gmail.com</a> | Ventura, CA</span><br />
-                <span style="display: block; margin-top: 10px">
+<div class="header-container">
+    <img src="images/sol-roth-logo-sm.png" style="max-width: 400px;" />
+    <div class="sliding-background">
+    </div>
+</div>
+
+
+    <div id="social-links-center" class="text-center">
+        <span>Sol Roth Productions | 805-827-2484 | <a href="mailto:solroth001@gmail.com">solroth001@gmail.com</a> | Ventura, CA</span><br />
+        <span style="display: block; margin-top: 10px">
             <a style="font-size: 1.5em; margin: 0px; padding: 0px; color: red;" href="https://www.youtube.com/c/solroth/" title="YouTube"><i style="margin: 0px; padding: 0px" class="fab fa-youtube"></i></a>
             <a style="font-size: 1.5em; margin: 0px; padding: 0px;" href="https://twitter.com/solro" title="Twitter"><i style="margin: 0px; padding: 0px" class="fab fa-twitter"></i></a>
             <a style="font-size: 1.5em; margin: 0px; padding: 0px; color: orange" href="https://www.instagram.com/solroth01/" title="Instagram"><i class="fab fa-instagram"></i></a>
             <a style="font-size: 1.5em;  margin-right: 5px; padding: 0px; color: brown;" href="https://www.quora.com/profile/Solomon-Rothman" title="Quora"><i style="margin: 0px; padding: 0px" class="fab fa-quora"></i></a>
              <a style="font-size: 1.5em;  margin-right: 5px; padding: 0px; color: dodgerblue;" href="https://www.amazon.com/gp/video/detail/B08M8W7J9W" title="Amazon Prime Video"><i style="margin: 0px; padding: 0px" class="fab fa-amazon"></i><span style="font-size: .7em;"> Watch Sol Roth's The Audition</span></a>
             </span>
-                <!-- <a href="">Facebook</a> -->
-            <!-- <a href="">IMDB</a> -->
-        </div>
+        <!-- <a href="">Facebook</a> -->
+        <!-- <a href="">IMDB</a> -->
     </div>
-
-
 
 </body>
 </html>
