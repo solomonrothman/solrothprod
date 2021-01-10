@@ -1,0 +1,23 @@
+:root {
+    --darkest-color: black;
+    --lightest-color: white;
+
+    --bg-color: #0a0a0a;
+    --bg-shadow-color: #0e0f11;
+    --bg-shadow-color-2: #141110;
+
+    --primary-color: #191514;
+    --primary-color-2: #353435;
+    --primary-color-3: #47413c;
+    --primary-color-4: #5c5653;
+
+    --ascent-color: #8a7b74;
+    --ascent-color-2: #676767;
+    --ascent-color-3: #c9b7b0;
+
+    --highlight-color: #c1bfbe;
+    --highlight-color-2: #b0938b;
+    --highlight-color-3: #efdbcb;
+    --highlight-color-4: #cb8c3d;
+    --highlight-color-5: #9e6f3d;
+}
