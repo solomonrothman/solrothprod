@@ -1,387 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Sol Roth - Actor, Artist, Athlete</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Actor 🎭 Artist ✍🏻 & Athlete💪🏻 Unstoppable with caffeine ☕ CEO of Sol Roth Media 🏢." />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
-    <!-- Normalize browser element style-->
-    <!-- <link rel=stylesheet href="https://s3-us-west-2.amazonaws.com/colors-css/2.2.0/colors.min.css"> -->
-    <!-- Normlize Broswer Behavior https://necolas.github.io/normalize.css/ -->
+  <meta charset="UTF-8">
+  <title>Sol Roth Media: Let's Make Something AWESOME</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
 
-    <link rel="stylesheet" type="text/css" href="css/variables.css" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="css/colors.css" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="css/axiom.css" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="css/fonts-custom.css" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="css/utilities.css" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="css/gradients.css" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="css/grid.css" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="css/custom.css" media="screen"/>
+  <!-- Normalize browser element style-->
+  <!-- <link rel=stylesheet href="https://s3-us-west-2.amazonaws.com/colors-css/2.2.0/colors.min.css"> -->
+  <!-- Normlize Broswer Behavior https://necolas.github.io/normalize.css/ -->
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" type="text/css" href="css/axiom.css" media="screen"/>
+  <link rel="stylesheet" type="text/css" href="css/sol-roth-media.css" media="screen"/>
 
-    <script>
-        window.onload=function() {
-            document.getElementById('show-vlog-entries').addEventListener("click", toggleTweets);
+  <!-- Put Open Graph Meta Data Here-->
+  <meta property="og:url"  content="http://solrothmedia.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sol Roth Media: Let's Make Something AWESOME" />
+  <meta property="og:description" content="We are a creative agency and production company that make series, feature films, websites, dance & performance art, music videos, multi-media applications, albums and many more amazing things. We do this because we want to, because we can, and because the world is listening." />
+  <meta property="og:image" content="http://solrothmedia.com/img/website/SR-Header-LG.png" />
 
-            function toggleTweets() {
-                const element = document.getElementById('tweet-container');
-                const vlogEntryLink = document.getElementById('show-vlog-entries');
-                const slateInner = document.getElementsByClassName('slate-inner'); // or:
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
 
-                if(element.classList.contains('tweet-collapse')){
-                    element.classList.remove('tweet-collapse');
-                    slateInner[0].style["opacity"] = "1";
-                    slateInner[0].style["padding-top"] = "40px";
-                    vlogEntryLink.text = 'Hide Entries';
-                }
-                else{
-                    element.classList.add('tweet-collapse');
-                    vlogEntryLink.text = 'Show Entries';
-                    slateInner[0].style["opacity"] = ".8";
-                    slateInner[0].style["padding-top"] = "200px";
-                }
-
-            }
-        }
-    </script>
-
-    <script src="//kit.fontawesome.com/ff90df295a.js" crossorigin="anonymous"></script>
-    <script src="./js/axiom.js"  type="module"></script>
+  <link rel="manifest" href="img/favicon/site.webmanifest">
+  <script src="//kit.fontawesome.com/ff90df295a.js" crossorigin="anonymous"></script>
+  <script src="//unpkg.com/alpinejs" defer></script>
 
 </head>
-<body>
+<body id="axiom-root">
+<header class="header-image">
+  <ul class="header-top-social" style="position: relative; right: 2rem; top: 195px; text-align: right;">
+    <a style="color: red;" href="https://www.youtube.com/channel/UC9Vne2hHWL33YpgeBtupNVA" title="SR Media"><i class="fab fa-youtube"></i></a>
+    <a style="color: orange" href="https://www.instagram.com/solroth01/" title="Instagram @solroth01"><i class="fab fa-instagram"></i></a>
+    <a style="color: darkblue" href="https://www.facebook.com/SolRothActor" title="Sol Roth Facebook Page"><i class="fab fa-facebook-f"></i></a>
+    <a style="color: #1DA1F2" href="https://twitter.com/solro" title="Twitter @solro"><i class="fab fa-twitter"></i></a>
+    <!-- <a style="color: white;" href="https://vm.tiktok.com/ZMebTsHKC/"><i class="fab fa-tiktok"></i></a> -->
+    <!-- <a style="color: brown; font-size: .8rem; margin-left: 5px;"> <span style="text-decoration: underline;">more</span><span style="font-size: 10px; text-decoration: underline;"> ▼ </span></a>-->
+  </ul>
+</header>
 
-<nav class="navbar navbar-dark">
-    <!-- start nav - outside of all containers -->
-    <a href="#about-us-section" class="toplinks"><!-- <i class="fas fa-link"></i--> About</a>
-    <a href="#vlog-section" class="toplinks"><!-- <i class="fas fa-link"></i>--> Vlog</a>
-    <a href=""  style="margin-left: 10px; margin-right: 10px; " class="gd-title old-movie foreground-text-color">Sol Roth</a>
-    <!--
-    <h1 class="gd-title old-movie foreground-text-color">
-    -->
-    <a href="#projects-section" class="toplinks">Projects <!-- <i class="fas fa-link"></i>--></a>
-    <a href="#contact-section" class="toplinks">Contact <!-- <i class="fas fa-link"></i>--></a>
+<nav style="text-align: center;">
+
+    <div class="highlight-header">
+      <strong>News and Highlights</strong>
+    </div>
+  <ul>
+    <li></li>
+    <li>6/2021 - <a href="http://audition.solroth.com">Sol Roth's The Audition Movie - Streaming on Plex TV, TubiTV & Amazon Prime.</a></li>
+  </ul>
+  <!--
+    <strong>Partner and Project Sites</strong>
+  <ul>
+    <li><a href="http://solrothfit.com">Sol Roth Fitness & Life Style Brand</a></li>
+    <li><a href="http://solroth.com">Sol Roth Official Site</a></li>
+  </ul>
+  -->
 </nav>
 
-<div>
-<!-- wrapper for page -->
-    <div class="highlight-wrapper">
-    <div class="highlight-black">
-        <!-- social media links -->
 
-        <div class="grey-strip center60"></div>
-        <div class="h2 center60 dark-light">
-            Actor, Artist & Athlete<br />
-            <span>Unstoppable with caffeine. CEO of Sol Roth Media.</span>
-        </div>
+<main>
+  <article>
+    <!-- who we are start -->
+    <h2 class="h4">Who We Are</h2>
+  <p>We create works that connect, inspire and entertain audiences, worldwide, across mediums and platforms.  Founded by Actor 🎭 , Artist ✍🏻  & Athlete 💪🏻 Sol Roth. </p>
 
-        <div class="social-media-top-links">
-            <a style="color: red;" href="https://www.youtube.com/c/solroth/" title="YouTube solroth"><i style="margin: 0px; padding: 0px" class="fab fa-youtube"></i></a>
-            <a style="color: #1DA1F2" href="https://twitter.com/solro" title="Twitter @solro"><i style="margin: 0px; padding: 0px" class="fab fa-twitter"></i></a>
-            <a style="color: orange" href="https://www.instagram.com/solroth01/" title="Instagram @solroth01"><i class="fab fa-instagram"></i></a>
-            <a style="color: maroon" href="https://www.quora.com/profile/Solomon-Rothman" title="Quora Sol Roth"><i style="margin: 0px; padding: 0px" class="fab fa-quora"></i></a>
-            <a style="color: darkblue" href="https://www.facebook.com/SolRothActor" title="Sol Roth Facebook Page"><i class="fab fa-facebook-f"></i></a>
-            <a style="color: yellow" href="https://www.imdb.com/name/nm4191378/" title="IMDB Sol Roth"><i class="fab fa-imdb"></i></a>
-            <a style="color: dodgerblue;" href="https://www.amazon.com/gp/video/detail/B08M8W7J9W" title="Amazon Prime Video"><i class="fab fa-amazon" aria-hidden="true"></i></a>
-            <a style="color: green" href="https://open.spotify.com/artist/2hFn4Llkv4AkG2qF90Rgvt" title="Spotify"><i class="fab fa-spotify"></i></a>
-            <a href="https://www.stage32.com/solroth" title="Stage 32"><img src="images/stage32-icon.png" style="width: 20px;" /></a>
+  <ul>
+    <li>Where obsession meets passion</li>
+    <li>Where heart and hard work proceed talent.</li>
+    <li>Where "I can", kills "I can't".</li>
+    <li>Where The impossible becomes possible.</li>
+    <li>Where we make awesome happen.</li>
+  </ul>
 
-        </div>
-        <!-- end highlight wrapper-->
+  <p>We make series, feature films, websites, dance & performance art, music videos, multi-media applications, albums and many more amazing things. We do this because we want to, because we can, and because the world is listening.</p>
+
+  <p>In a land full of limitations, where people put you in boxes and try to define what you can and can not be, Sol Roth Media 🏢 is a shining light that contradicts common knowledge of what a single man with a vision, hard work and an unshakeable belief in oneself can accomplish.</p>
+
+  <p><strong>Have the courage to be your true self, follow your dreams & let’s make something awesome.</strong></p>
+
+    <!-- who we are end -->
+  </article>
+
+  <header class="sr-header">
+
+  </header>
+  <div style="text-align: center; background-color: dimgrey; margin-top: -20px; opacity: .6; letter-spacing: 18px; padding-top: 20px; padding-bottom: 5px;">
+    <h2 class="h2" style="color: white; letter-spacing: 16px; font-weight: 600; text-transform: uppercase">Who is Sol Roth?
+      <br /><span style="text-transform: lowercase; letter-spacing: normal; font-weight: normal;"> A high energy prolific creator, unstoppable with caffeine</span>
+    </h2>
+  </div>
+
+
+  <article class="full">
+    <!-- <h2 class="h4">Who is Sol Roth?</h2>-->
+    <div>
+
+      <p>Sol Roth is an Actor 🎭 , Artist ✍🏻 & Athlete 💪🏻 . He's a high energy, prolific creator who is always working on his next project and fearlessly trying to push his limits in an epic quest to express his true self as both an artist and a person. He hopes his work will both entertain and inspire others to have the courage and heart to be themselves regardless of what other people think of them.</p>
+
+      <p>In between hardcore cross-training sessions, he is always working to make something new, to make something better, and to re-imagine what’s possible. Sometimes that means auditioning for a new movie role, shooting a viral dance video, designing images, and the list continues (music, art, performance, writing) and that's not even including running and growing a creative media agency (Sol Roth Media.).</p>
+
+      <blockquote>“Don't live your life in a box someone else put you in. Have the courage to be your true self. This is the year we make it happen.”
+        <footer class="blockquote-footer">Sol Roth</footer>
+      </blockquote>
+
+      <p>Sol Roth grew up in Eugene, Oregon as a skinny, shy kid. In high school he got his first taste of theater and was hooked. He began writing his own stories. Through fitness, dance and artistic performance, he overcame the shyness that dominated his childhood. After high-school he served in the US Army and built up his body and real life adventure experience. He attended the University of Oregon and after being inspired by the the independent filmmaking revolution he wrote, starred, and directed his first feature film. After college, Sol Roth put everything he owned in the trunk of his car and drove down to LA to pursue his dreams.</p>
+
+      <p>From there Sol Roth has built both a company and a body of work that spans platforms and genres. He is an athlete and fitness motivator who trains hardcore and is always pushing his mind and body, a viral dancer and performance artist with millions of views on social media, an actor in feature films, a writer of books and original movie scripts, a designer of logos and artwork, and the list goes on and on. His goal is to make works that matter and inspire others while expressing his true self... And being awesome!</p>
+
+      <section>
+        <h4 class="h4">Sol Roth's Individual Sites & Profiles </h4>
+        <div>These are about the person.</div>
+
+        <ul>
+          <!-- <li><a href="http://solroth.com">Official Website - SolRoth.com</a></li>-->
+          <li><a style="color: orange" href="https://www.instagram.com/solroth01/" title="Instagram @solroth01"><i class="fab fa-instagram"></i> Instagram @solroth01</a></li>
+          <li><a href="https://vm.tiktok.com/ZMebTsHKC/"><i class="fab fa-tiktok"></i> TikTok @solroth01</a></li>
+          <li><a style="color: maroon" href="https://www.quora.com/profile/Sol-Roth-2"><i class="fab fa-quora"></i> Quora</a></li>
+          <li><a href="https://www.stage32.com/solroth">Stage 32</a></li>
+          <a style="color: #1DA1F2" href="https://twitter.com/solro" title="Twitter @solro"><i class="fab fa-twitter"></i> Twitter @solro</a>
+        </ul>
+
+      </section>
+
     </div>
 
-        <!-- nav in header will be app bar style
-        <nav>
-            <ul>
-            <li>item 1</li>
-            <li>item 2</li>
-            <li>item 3</li>
-            </ul>
-        </nav>
-        -->
-    </div>
-
-
-        <article class="multi-column about-us" id="about-us-section">
-            <h2>About</h2>
-            <!-- Video with an article and pics -->
-
-            <p><strong>First and foremost, I'm an actor</strong>. Sometimes without a part to play, but always performing,
-            reaching, trying to feel alive for a moment in the reflection of a role, a character to lose myself in, a fantasy,
-            a day dream, a reality in a reality,a simulation in the simulation of life. I'm driven to express the creative musings
-                echoing in my soul, and to revel in the attention from the expression of my true self.</p>
-
-            <p>My tagline is simple, but disjointed. I'm an actor, artist and athlete. Like so many other people, in the
-            blind grandeur and immortal feelings of youth,I didn't set myself up to follow my dreams correctly. I thought
-            I'd have more time and that opportunities would somehow find a way to me from passion alone (they didn't). Don't worry I'm not dying
-                yet, I'm healthy, strong and full of motivation to kick some ass and make it happen.</p>
-
-            <p>I realize now, that little voice in my head, the one yearning to find creative projects, the one desperately
-                seeking mediums for artistic self expressions, only got louder and louder.
-            The more I put it off, the more I tried to avoid facing the fact that my trajectory in life was not inline with what I really wanted
-            , the more I didn't follow it, the crazier I felt, the less full-filled, and the LOUDER that voice got (figuratively speaking, I don't actually hear voices). The time is now.
-                This is the year we make it happen (and next year and the next after that).</p>
-
-            <p>So this one is for me.. haha, but it's also for you. For everyone who took a little while to get their life goals together, who
-            had to work a little harder than everyone else and by pure worth ethic, desire and passion had to forge a way through after the initial path
-                to their dreams was closed. This one's for you!</p>
-
-            <p>Actor and artist fit together nice, I create films, I write them, act, direct,produce and all other other buzz
-            words you can tag yourself with when you make independent films. I visualize, I build worlds in the my dreams and then make them true
-            (outside of my 9-5 hahah). The athlete part is the added on bit, but it all goes together to
-            understanding me. Fitness has always been a part of my life, It channels my core warrior spirit,
-            it keeps me strong, both literally (physical strength) and mentally by relieving stress and allowing me to focus on the now,
-            to push myself beyond the discomfort to achieve an aesthetic ideal. Also, I work out every single day, so It's a good stable base
-            for blogging and building the action star structure, I will showcase in future productions. Plus I just like it, haha. I'm always
-            trying to do more, practice new things, and build a better body. You can join me on that journey as well.</p>
-
-
-            <p>The art of destruction is simpler than creation. So easy to destroy a world, but so hard to build a new one.
-            Because of this, an artist usually must be a selfish person, driven to try and create in a world, that will
-            almost certainly find it easier to destroy / judge/ tear down your creation than to live it, accept it,
-            enjoy it or improve it. I engineer my own reality and before the brand of Sol Roth was dreamed up and I
-            began this ascent or if this was a dystopian tale, descent into my story telling dreamscape, I was a failed
-            artist. A failure in this sense that I wasn’t expressing myself in the way that I am innately driven to do.
-            This is my epilogue, my beginning and my end. This is my immortality.
-                My selfish obsession that placates my compulsive insanity and helps me stay motivated in my life.</p>
-
-            <p>In challenging times, when I'm faced with difficulties,
-                crippling self doubt and the feelings of being overwhelmed, I re-read the comments and emails from my fans,
-                I re-read all the messages from people who said they were inspired, entertained or touched by something I created. That gives me strength to
-                push on and renews my willpower, drive and abilities.
-            EVERY single fan and every comment is immensely appreciated.
-            I couldn't do this without you. To my fans, thank you so much - You're all awesome!</p>
+  </article>
+</div>
 
 
 
-            <!-- get to these later-->
+  <header class="sr-filmmaking-header">
 
-            <!--
-            Life Highlights, feel free to ask me about these in person and get ready for a long winded, way too long story, but hey, it'll make me smile. NOTE: I'm included the ups and the downs, because that is life.
+  </header>
 
-            <ul>
-                <li>Loved science fiction - </li>
-                <li>Another detail</li>
-                <li>Acted in theater plays in High School, got my first taste and love for acting - looked too young to play any cool parts, but loved it anyways</li>
-                <li>Wrote my first movie script in highschool, it was terrible, haha. It involved a simplistic rags to riches story about a troubled youth, WTF was I thinking</li>
-                <li>Joined the US Army at 18, that started my fitness journey. I went from barely pasing the Army PT test, to having the highests score in my batallation on record (highest score recorded in years)</li>
-                <li>Started part-time college while serving int he ARMY - Wrote the draft of my first theatre play on guard duty in the US ARMY</li>
-                <li></li>
-            </ul>
+  <div style="text-align: center; background-color: dimgrey; opacity: .6; margin-top: -20px; letter-spacing: 16px; padding-top: 20px; padding-bottom: 5px;">
+    <h2 class="h2" style="color: white; letter-spacing: 18px; font-weight: 600; text-transform: uppercase">Filmmaking Channel
 
-            <strong>Inspirations</strong>
-            Theater Plays:
-            <ul>
-                <li>Death of a Salesman - Arthur Miller</li>
-                <li>Death and the Maiden -  Ariel Dorfman</li>
-                <li>Cherry Docs - David Gow</li>
-            </ul>
+      <br /><span style="text-transform: lowercase; letter-spacing: normal; font-weight: normal;"> New shows to watch - Behind the scenes content & a ton about acting</span>
+    </h2>
+  </div>
 
-                     Movies that have inspired me:
-            <ul>
-            </ul>
--->
-            <!--
-            <div class="row small">
-                <div class="col-md-3 col-sm-6 col-xs-8 col-attributes">
-                    <strong>Gender:</strong><br>
-                    Male </div>
-                <div class="col-md-3 col-sm-6 col-xs-8 col-attributes">
-                    <strong>Body type:</strong><br>
-                    Athletic </div>
-                <div class="col-md-3 col-sm-6 col-xs-8 col-attributes">
-                    <strong>Hair:</strong><br>
-                    Short </div>
-                <div class="col-md-3 col-sm-6 col-xs-8 col-attributes">
-                    <strong>Hair color:</strong><br>
-                    Black </div>
-                <div class="col-md-3 col-sm-6 col-xs-8 col-attributes">
-                    <strong>Eyes:</strong><br>
-                    Brown </div>
-                <div class="col-md-3 col-sm-6 col-xs-8 col-attributes">
-                    <strong>Ethnicity:</strong><br>
-                    Caucasian </div>
-            </div>
--->
-        </article>
+  <article class="dark-theme">
 
-        <article>
-            <div class="filmmography" id="projects-section">
+    <section class="container-fixed">
+      <h3 class="h4">Sol Roth Movies & Filmmaking <span> New shows to watch - Behind the scenes content & a ton about acting </span></h3>
 
-                <h2 class="section-main-title">Featured Filmmography</h2>
-
-                <div class="grid-1-2 film">
-
-                    <div class="poster light-on-dark left-side">
-                        <img src="http://audition.solroth.com/images/2x3-small-Movie-Poster-Sol-Roths-The-Audition.jpeg" style="max-width: 100%;"/><br />
-
-                        <h4>Links and References</h4>
-                        <ul>
-                            <li><a href="http://audition.solroth.com">Official Movie Site</a></li>
-                            <li><a href="https://tubitv.com/movies/571264/sol-roth-s-the-audition">Watch Free on TubiTV</a></li>
-                            <li><a href="https://www.amazon.com/gp/video/detail/B08M8W7J9W/">Watch on Amazon Prime</a></li>
-                            <li><a href="https://www.imdb.com/title/tt13340636/">IMDB Listing and Reviews</a></li>
-                        </ul>
-
-                    </div>
-                    <div class="film-details dark-on-light right-side">
-                        <a href="http://audition.solroth.com" target="_blank"><h3 style="margin: 0px;">Sol Roth's the Audition <span>(2020)</span></h3></a>
-                        <b>Actor / Writer / Director</b>
-
-                        <p>Sol Roth is put through the ultimate acting audition, performing back to back parts spanning genres, characters and stories across the full gamete of human emotion. While on quarantine from covid-19, Sol Roth challenged himself to create a throw back to the original acting masters who used only their body and voice as tools to bring stories to life long before the age of cgi and even film. The Audition is a beautiful self aware minimalist movie will carry you away on journeys in your own mind as each monologue unlocks a unique story. Love or hate it, Sol Roth has created a rare modern homage to the acting art form. Timeless subject: acting monologues with modern twists. The Auteur writer/director is the social media star, Sol Roth. Shot in stunning film like monochrome, this minimalist film is a beautiful homage to the acting art form.</p>
-
-                        <strong>Reviews and Ratings <span class="imdbRatingPlugin" data-user="ur10597242" data-title="tt13340636" data-style="p2"><a href="https://www.imdb.com/title/tt13340636/?ref_=plg_rt_1"><img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_38x18.png" alt="Sol Roth's the Audition (2020) on IMDb" />
-</a></span><script>(function(d,s,id){var js,stags=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}js=d.createElement(s);js.id=id;js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";stags.parentNode.insertBefore(js,stags);})(document,"script","imdb-rating-api");</script></strong>
-
-                        <h4>Unique and moving, The Audition is a unique little gem that succeeds <small><br /><a href="https://www.imdb.com/user/ur26476613/">Rehan Abbasi </a><em> IMDB Top User with 2300+ Movie ratings</em></small></h4>
-
-
-
-                        <p>...The Audition is an interesting visual spectacle to say the least. The entire experience is in black and white, to nudge the viewer to focus towards Sol's physical performance and to tune out everything else. This develops an interesting dynamic between the actor and the audience as Sol frequently breaks the fourth wall in his quest to move the audience. Donning the persona of widely different individuals from different walks of life, Sol provides a powerhouse display of emotions across the board as he digs deep into each character that he portrays. Creative and inventive in equal measure, this visual experiment succeeds because it is moving, it is inspiring and above all, it is confident. Filled with nuance and subtlety, Sol's expressive stint will not only wake up the right people in the industry but is sure to make them take notice of this extremely talented young man.
-                            <br />
-                            <a href="https://www.imdb.com/review/rw6356402/?ref_=tt_urv">Link to Full IMDB User Review</a>
-                        </p>
-
-                        <strong>For the Fans and Supporters</strong>
-                        Here's how you can help promote and support the movie.
-                        <ol>
-                            <li>Watch it on one of the streaming networks where it's been released.</li>
-                            <li>Rate and Leave an honest review on that network.</li>
-                            <li>Rate and leave an honest review on the IMDB.</li>
-                            <li>Share it, blog it, or comment on one of your social media accounts, be sure to tag me so I can check it out and respond.</li>
-                        </ol>
-
-                        If you do all that, you're AMAZING!!
-
-                    </div>
-                </div>
-
-                <div class="grid-2-1 film">
-                    <div class="film-details left-side dark-on-light">
-                            <a href="http://www.imdb.com/title/tt5006994/" target="_blank"><h2 style="margin: 0px;">The Dollface Slasher<span> (2015)</span></h2> </a>
-                            <b>Actor / Writer / Director</b>
-                        <p>
-                        In a small town rocked by horrific murders, Kelly and Jason decide to stay safe, cozy up and watch a horror movie. Little do they know, they'll be starring in their own massacre when they are attacked by a masked figure in this modern homage to the classic slasher movies of the 80s and 90s
-                        </p>
-
-                        <h4>Reviews and Ratings</h4>
-                        <strong>Excellent for what it's meant to be, a short homage that captures the spirit of old slasher.</strong> | Jennifer Watkins
-                        <p>
-                            "...For starters, this This This movie captures a lot within a short amount of time. The starting makes it seem like it's going to be a droll buster wannabe, which saddened me, but three minutes in (Hey, in an 11 minute movie, that's a lot!) you realize you've been duped. This movie manages to capture the spirit of the old slasher flicks pretty well to a T. You have all the hallmarks, which of course comes with the pitfalls, but by the end you're just wishing this was a full length feature. In that regard, I believe it did it's job perfectly as a short homage.
-
-                            The actors and actresses gave a great performance when compared to other Indie stars, while the scream from Kelly is just pure slasher magic. I find myself now wishing this was a glorified trailer and we'd be seeing more of it in the future, with an expanded run time and plot, (Maybe more about that awesome dollface killer?) but unfortunately we live on planet earth.... so that won't happen.
-
-                            All in all, kudos. Very good job."<br />
-                            <a href="https://www.amazon.com/gp/customer-reviews/R3MAHJ92DP90O6/">Link to Full Review on Amazon Prime Video</a>
-                        </p>
-
-                        <strong>Film Festivals and Theatrical Screening Locations.</strong>
-                        <ul>
-                            <li><strong>HollyShorts</strong> 2016 - Hollywood, California, USA (theatrical festival premiere)</li>
-                            <li><strong>Fright Night Film Fest</strong> 2016 - Louisville, Kentucky, USA (shown theatrically)</li>
-                            <li><strong>Horror In the Hills</strong> 2016 - Pigeon Forge, TN, USA (shown theatrically)</li>
-                            <li><strong>LAIFFA</strong> 2016 - Los Angeles, CA USA (shown theatrically)</li>
-                            <li><strong>AVIFF Cannes</strong> Broadcast Catalog Selection - Cannes, France</li>
-                            <li><strong>Eurocinema Film Festival</strong> -  Switzerland (selected, but didn't screen)</li>
-                            <li><strong>Austria International Film Festival</strong> - Austria (selected, but didn't screen)</li>
-                            <li><strong>Cinema New York City</strong>, New York, USA (selected, but didn't screen)</li>
-                        </ul>
-
-                    </div>
-                    <div class="poster light-on-dark right-side">
-                        <img src="images/the-dollface-slasher-movie-poster.jpg" style="max-width: 100%;"/>
-                        <h4>Links and References</h4>
-                        <ul>
-                            <li><a href="https://www.screambox.com/videos/the-dollface-slasher">The Dollface Slasher on Screambox</a></li>
-                            <li><a href="https://www.amazon.com/Dollface-Slasher-Solomon-Rothman/dp/B06VSJWB2H">The Dollface Slasher on Amazon Prime Video</a></li>
-                            <li><a href="https://www.imdb.com/title/tt5006994/">IMDB Listing and Reviews</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-<!-- end filmmography-->
-            </div>
-
-        <article class="multi-column">
-            <h2 class="flush">Legacy Films and Older Works</h2>
-            <p>
-                Early on as filmmaker and artist, I was very experimental, headstrong and overly ambitious in my quest to tell original stories.
-                Some things I tried, worked, some didn't, but ost of what I created, I don't regret making. I'm happy for the opportunities I was able to take advantage of.
-
-                I don't link to or reference most of my early works on this site. Why?. Time passed, I improved my skill-set, technology improved and
-                the world changed. Many of my early works, are not evergreen, they can't be appreciated now, in th same way as when I created them.
-                Although I earned many fans and still receive emails, messages and comments from people all over the world from these works, most do not hold up to current
-                quality standards expected of a professional filmmaker (some of my early work had audio issues and were not in HD, as just a few examples).
-
-                Over time, I learned how to create works that would reach larger audiences and be accepted, enjoyed and understood.
-
-                If you do seek out and find my older works (some of them have millions of views and VOD distribution, so they are not invisible). I hope you enjoy them and would love to hear your thoughts. Just please realize they aren't representative of the quality I can produce and the vision of how I tell modern stories. I've improved a lot and I'm always striving to be better.
-            </p>
-        </article>
-
-        <article class="vlog-container">
-            <h2 class="section-main-title" id="vlog-section">Vlog</h2>
-            <!-- Embed YouTube Playlist here-->
-
-
-            <div class="vlog-slate">
-
-                <div class="slate-inner">
-
-                    <a id="show-vlog-entries" class="show-entry-button" style="
-    margin-left:  auto;
-    margin-right:  auto;
-">Show Latest Entries</a><br />
-                    <br />
-                    <span>Subscribe on <a href="" style="color: red;"><i class="fab fa-youtube"></i> YouTube</a> or <a href="" style="color: #1DA1F2"><i class="fab fa-twitter"></i> Twitter</a> for Daily Posts</span>
-                    <br /><br />
-
-                    <div id="tweet-container" class="tweet-collapse" style="text-align: center; margin-left: auto; margin-right: auto">
-                        <a class="twitter-timeline" data-dnt="true" data-theme="dark" data-align="center" href="https://twitter.com/solro?ref_src=twsrc%5Etfw">Tweets by solro</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                    </div>
-                </div>
-                </div>
-
-        </article>
-            <article>
-                <h2 class="section-main-title" id="contact-section">Contact</h2>
-
-                <p style="padding: 20px;"> The best way to reach me is via an email <a href="mailto:solroth001@gmail.com">solroth001@gmail.com</a> or a text message <a href="tel:8058272484">805-827-2484</a>. Don't be shy, I'm always working on new filmmaking projects, creating content daily and I love talking to my fans and potential collaborators.  I'm active across many social media sites and I will respond to comments and messages on there as well.</p>
-
-            </article>
-
-    <footer>
-          <div class="social-media-links" style="text-align: center; font-size: 2rem; margin-top: 10px;">
-            <a style="color: red;" href="https://www.youtube.com/c/solroth/" title="YouTube solroth"><i style="margin: 0px; padding: 0px" class="fab fa-youtube"></i></a>
-            <a style="color: #1DA1F2" href="https://twitter.com/solro" title="Twitter @solro"><i style="margin: 0px; padding: 0px" class="fab fa-twitter"></i></a>
-            <a style="color: orange" href="https://www.instagram.com/solroth01/" title="Instagram @solroth01"><i class="fab fa-instagram"></i></a>
-            <a style="color: maroon" href="https://www.quora.com/profile/Solomon-Rothman" title="Quora Sol Roth"><i style="margin: 0px; padding: 0px" class="fab fa-quora"></i></a>
-              <a style="color: darkblue" href="https://www.facebook.com/SolRothActor" title="Sol Roth Facebook Page"><i class="fab fa-facebook"></i></a>
-              <a style="color: yellow" href="https://www.imdb.com/name/nm4191378/" title="IMDB Sol Roth"><i class="fab fa-imdb"></i></a>
-            <a style="color: dodgerblue;" href="https://www.amazon.com/gp/video/detail/B08M8W7J9W" title="Amazon Prime Video"><i class="fab fa-amazon" aria-hidden="true"></i></a>
-            <a style="color: green" href="https://open.spotify.com/artist/2hFn4Llkv4AkG2qF90Rgvt" title="Spotify"><i class="fab fa-spotify"></i></a>
-            <a href="https://www.stage32.com/solroth" title="Stage 32"><img src="images/stage32-icon.png" style="width: 20px;" /></a>
+        <div>
+          <p><strong>FEATURED</strong> Put something about the featured project here and a link to learn more about it.</p>
         </div>
+
+      <ul>
+        <li><a href="https://www.youtube.com/user/solomonrothman"><i class="fab fa-youtube"></i>Movies and Filmmaking Specific YouTube</a></li>
+        <li><a style="color: orange" href="https://www.instagram.com/solroth01/" title="Instagram @solroth01"><i class="fab fa-instagram"></i> Instagram - (ALL Topics - Filmmaking & Everything else)</a></li>
         <br />
-        <a href="tel:8058272484">805-827-2484</a> | <a href="mailto:solroth001@gmail.com">solroth001@gmail.com</a> | Los Angeles, CA
+        <li><strong>Films and Series</strong>
+          <ul>
+            <li><a href="http://audition.solroth.com/">Sol Roth's The Audition 2020</a> <a href="https://tubitv.com/movies/571264/sol-roth-s-the-audition">[Watch Now]</a>
+              <div>Sol Roth is put through the ultimate acting audition, performing back to back parts spanning genres, characters and stories across the full gamete of human emotion. Streaming on Amazon Prime, TubiTV, PlexTV</div>
+            </li>
+            <li><strong>Out of the Box</strong> (In Development) Feature Movie</li>
+            <li><strong>Splintered Connections</a></strong> (TV Mini-Series) (pre-production) <a href="https://www.imdb.com/title/tt14576696/">[IMDB Listing]</a></li>
+            <li><strong>Collaborative Visions:</strong> The Making of Splintered Connections (Documentary) (filming) <a href="https://www.imdb.com/title/tt14576718/">[IMDB Listing]</a></li>
+          </ul>
 
-    </footer>
+        </li>
 
-</div>
-<!--
-<div class="hd-ft-3col">
-    <header>Header</header>
-    <aside>Col 1</aside>
-    <main>Col 2</main>
-    <aside>Col 3</aside>
-    <footer>Footer</footer>
-</div>
--->
+      </ul>
+    </section>
+  </article>
+
+  <header class="sr-fit-header">
+
+  </header>
+  <div style="text-align: center; background-color: dimgrey; letter-spacing: 16px; margin-top: -20px; opacity: .6; padding-top: 20px; padding-bottom: 5px;">
+    <h2 class="h2" style="color: white; letter-spacing: 18px; font-weight: 600; text-transform: uppercase">Fitness Channel <br /><span style="text-transform: lowercase; letter-spacing: normal; font-weight: normal;"> Hardcore training, challenges, dance, motivation & fun stuff.</span></h2>
+  </div>
+
+
+  <section class="container-fixed">
+     <h3 class="h4">Sol Roth Fitness and Lifestyle</h3>
+    <div>
+       More than just workouts, Sol Roth【﻿ Actor 🎭 , Artist ✍🏻 , Athlete 💪🏻 】puts in the hard work and takes on everything from fitness challenges to hardcore training, to dance challenges and motivation! He's always giving away tips on how to stay entertained and challenged in the fitness lifestyle.
+    </div>
+
+    <ul>
+      <li><a href="https://www.youtube.com/channel/UCO_WCu_AM_w4PjFMs0IXtew"><i class="fab fa-youtube"></i> Fitness & Lifestyle Specific YouTube Channel</a></li>
+      <li><a style="color: orange" href="https://www.instagram.com/solroth01/" title="Instagram @solroth01"><i class="fab fa-instagram"></i> Instagram - (ALL Topics - Fitness & Everything else)</a></li>
+    </ul>
+  </section>
+
+  </article>
+
+  <header class="sr-contact-header">
+
+  </header>
+
+  <div style="text-align: center; opacity: .6; background-color: dimgrey; letter-spacing: 18px; margin-top: -20px; padding-top: 20px; padding-bottom: 5px;">
+    <h2 class="h3" style="color: white; letter-spacing: 18px; font-weight: 600; text-transform: uppercase">Contact & Company Links</h2>
+  </div>
+
+  <article>
+    <h2 class="h4">Contact</h2>
+    <ul>
+      <li><strong>Go for It</strong><em> - Use this for most stuff... seriously, this is probably you</em><br />
+    Email:<a href="mailto:goforit@solrothmedia.com">goforit@solrothmedia.com</a></li>
+      <br />
+      <li><strong>Awesome</strong><em> - For the very best - if you're trying to sell us something, DO NOT USE</em><br />
+        Email:<a href="mailto:awesome@solrothmedia.com">awesome@solrothmedia.com</a></li>
+      </li>
+      <br />
+      <li><strong>Auteur</strong><em> - If you don't get it, use the one two above this.</em><br />
+        Email:<a href="mailto:solroth@solrothmedia.com">solroth@solrothmedia.com</a></li>
+      </li>
+    </ul>
+  </article>
+
+  <article>
+    <h4 clss="h5">Company Profiles <span> - not where the fun content is</span></h4>
+    <ul>
+      <li><a href="https://g.page/sol-roth-media">Google Business Listing for Sol Roth Media</a></li>
+    </ul>
+  </article>
+
+</main>
+<!-- Social Links Info Grid -->
+
+<footer>
+  <div style="text-align: center;"><small>Sol Roth Media, LLC 📍 Los Angeles 🇺🇸 - Tel. 805-827-2484 - <a href="mailto:goforit@solrothmedia.com">goforit@solrothmedia.com</a></small></div>
+</footer>
 
 </body>
 </html>

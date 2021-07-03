@@ -1,0 +1,317 @@
+.hd-3col-ft {
+    display: grid;
+    /*grid-template-columns: repeat(12, 1fr);
+    /* grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)*/
+    grid-auto-rows: auto 1fr auto;
+    grid-template-areas:
+                "hd hd hd hd hd hd hd hd hd hd hd hd"
+                "col1 col1 col1 col2 col2 col2 col2 col2 col2 col2 col3 col3"
+                "ft ft ft ft ft ft ft ft ft ft ft ft";
+    height: 100vh;
+    /** width: 100vw; */
+    grid-gap: 1rem;
+}
+
+.hd-2col-ft{
+
+}
+
+.hd-1col-ft{
+
+}
+
+.header, header {
+    grid-area: hd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer, footer {
+    grid-area: ft;
+}
+
+main, .content {
+    grid-area: col2;
+}
+
+.col1, .hd-3col-ft aside:first-of-type {
+    grid-area: col1;
+}
+
+.col3, .hd-3col-ft aside:last-of-type{
+    grid-area: col3;
+}
+
+.g-unset{
+    grid-area: unset;
+}
+
+footer{
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+
+.hd-3col-ft  > div.overlay {
+    z-index: 10;
+    grid-column: col2-start / col3-end;
+    grid-row: hd-start / ft-end;
+    border: 4px solid rgb(92,148,13);
+    background-color: rgba(92,148,13,.4);
+    color: rgb(92,148,13);
+    font-size: 150%;
+}
+
+h1{
+    font-family: Badhead;
+    font-size: 4rem;
+    display: inline-block;
+}
+
+h1 span{
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    display: block;
+    font-size: 1.4rem;
+}
+
+.gd-title{
+    line-height: normal;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: Badhead;
+    font-size: 4rem;
+    /**    -webkit-text-stroke-color: ghostwhite;
+        -webkit-text-stroke-width: .2px; **/
+}
+
+.highlight-black{
+    color: white;
+    background-image: url("../images/top-banner-sol-roth.png");
+    background-position: center;
+    min-height: 635px;
+    text-align: center;
+    border-bottom: 2px;
+    border-bottom-color: darkgray;
+    border-bottom-style: solid;
+}
+
+nav{
+    text-align: center;
+    display: block;
+}
+
+.navbar{
+    padding: 0px;
+}
+
+.dark-light-outer{
+
+}
+
+.dark-light{
+    width: 100%;
+    background-color: black;
+    opacity: .4;
+    color: white;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.dark-light-inner{
+    opacity: .4;
+}
+
+
+.grey-strip{
+    background-color: black;
+    height: 160px;
+    width: 100%;
+    opacity: .3;
+}
+
+
+.social-media-top-links{
+    text-align: right;
+    padding-right: 5px;
+    padding-top: 5px;
+    position: relative;
+    top: 600px;
+}
+
+.social-media-top-links a{
+    opacity: 80%;
+    margin-right: 5px;
+    font-size: 1.5rem;
+    padding: 0px;
+}
+
+.social-media-top-links a:hover{
+    opacity: 100%;
+}
+
+.navbar-dark{
+    background-color: #0a0a0a;
+    border-bottom-color: #1b2021;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    display: block;
+}
+
+.navbar-dark a{
+    text-decoration: none;
+    color: lightgray;
+}
+.navbar-dark a:hover{
+    opacity: 50%;
+}
+
+.highlight-wrapper{
+    background-image: url('../images/dark-grass-pattern.png');
+}
+
+.navbar a.toplinks{
+    margin-right: 10px;
+    font-size: 1rem;
+    position: relative;
+    top: -15px;
+}
+
+.timeline-Widget{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center !important;
+}
+
+.tweet-collapse{
+    display: none;
+}
+
+#show-vlog-entries{
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.content-long{
+    padding: 1rem;
+}
+
+.content-long p{
+
+}
+
+.about-us{
+    background-image: url("../images/about-us-vert-strip.jpg");
+    background-position: top right;
+    background-repeat: repeat-y;
+    padding-right: 220px;
+    column-width: 400px;
+    column-gap: 60px;
+    padding-left: 20px;
+    column-rule-width: thin;
+    column-rule-color: lightgrey;
+    column-rule-style: solid;
+}
+
+.multi-column{
+    column-width: 400px;
+    column-gap: 60px;
+    padding-left: 20px;
+    column-rule-width: thin;
+    column-rule-color: lightgrey;
+    column-rule-style: solid;
+}
+
+.film{
+    /**
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+**/
+    padding-bottom: 3rem;
+}
+
+.film ul{
+    text-align: left;
+    line-height: 1.5;
+}
+
+.film ul a:hover{
+    text-decoration: underline;
+}
+
+.poster{
+    text-align: center;
+    background-color: black;
+    padding-top: 2rem;
+    color: white;
+}
+
+.film-details{
+    padding: 2rem;
+    padding-top: 0px;
+}
+
+.flush{
+    margin-top: 0px;
+}
+
+.vlog-container{
+    /** background-image: url("images/vlog-back.jpg");
+    background-size: cover;
+     */
+    text-align: left;
+}
+
+.vlog-cta{
+
+}
+
+.show-entry-button{
+
+}
+
+.vlog-slate{
+    background-image: url("../images/vlog-back2.jpg");
+    background-position: left;
+    background-size: contain;
+    height: 460px;
+    background-repeat: repeat-x;
+    background-color: black;
+}
+
+.slate-inner{
+    line-height: 1.2;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 180px;
+    opacity: .8;
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+}
+
+#twitter-widget-0{
+    max-width: 1200px !important;
+}
+
+.light-on-dark{
+
+}
+
+a{
+    color: var(--highlight-color-5);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.section-main-title{
+    padding-left: 20px;
+    margin-top: 50px;
+}

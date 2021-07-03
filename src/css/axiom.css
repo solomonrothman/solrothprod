@@ -508,16 +508,16 @@ span, .span {
   text-align: center;
   margin-left: auto;
   margin-right: auto; }
-span p, .span p {
-  max-width: 60rem;
-  text-align: left;
-  margin-left: auto;
-  margin-right: auto; }
+  span p, .span p {
+    max-width: 60rem;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto; }
 
 article, .article {
   text-align: left; }
-article section .section, .article section .section {
-  padding: .6rem; }
+  article section .section, .article section .section {
+    padding: .6rem; }
 
 /** Typography **/
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
@@ -526,50 +526,50 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-style: normal;
   font-variant: normal;
   font-weight: 700; }
-h1 span, .h1 span, h2 span, .h2 span, h3 span, .h3 span, h4 span, .h4 span, h5 span, .h5 span, h6 span, .h6 span {
-  font-weight: normal; }
+  h1 span, .h1 span, h2 span, .h2 span, h3 span, .h3 span, h4 span, .h4 span, h5 span, .h5 span, h6 span, .h6 span {
+    font-weight: normal; }
 
 h1, .h1 {
   font-size: 2.5rem;
   line-height: 3.3rem;
   font-weight: 900; }
-h1 span, .h1 span {
-  font-size: 1.7rem; }
+  h1 span, .h1 span {
+    font-size: 1.7rem; }
 
 h2, .h2 {
   font-size: 2.1rem;
   line-height: 2.9rem;
   font-weight: 800; }
-h2 span, .h2 span {
-  font-size: 1.5rem; }
+  h2 span, .h2 span {
+    font-size: 1.5rem; }
 
 h3, .h3 {
   font-size: 1.7rem;
   line-height: 2.5rem;
   font-weight: 700; }
-h3 span, .h3 span {
-  font-size: 1.3rem; }
+  h3 span, .h3 span {
+    font-size: 1.3rem; }
 
 h4, .h4 {
   font-size: 1.3rem;
   line-height: 2.1rem;
   font-weight: 600; }
-h4 span, .h4 span {
-  font-size: 1.1rem; }
+  h4 span, .h4 span {
+    font-size: 1.1rem; }
 
 h5, .h5 {
   font-size: 0.9rem;
   line-height: 1.1rem;
   font-weight: 500; }
-h5 span, .h5 span {
-  font-size: 0.9rem; }
+  h5 span, .h5 span {
+    font-size: 0.9rem; }
 
 h6, .h6 {
   font-size: 0.9rem;
   line-height: 0.9rem;
   font-weight: 500; }
-h6 span, .h6 span {
-  font-size: 0.9rem; }
+  h6 span, .h6 span {
+    font-size: 0.9rem; }
 
 .full {
   width: 100%;

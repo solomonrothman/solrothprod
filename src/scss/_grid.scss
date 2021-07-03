@@ -1,0 +1,294 @@
+/**
+  Grid Utility Classes
+  Inspiration from this - https://induro.io/blog/2018/10/grid_layout_utility/
+  - https://tailwindcss.com/docs/grid-template-columns
+  *
+  * May be of help to understand / modify output
+  // Set sizes without units
+$basefont: 20;
+$total-width-px: 1169;
+$column-width-px: 72;
+
+// Concatenation of units by addition results in conversion to string. This is bad
+$basefont-px: $basefont+'px';  // = "20px"
+
+// Conversion to pixels using multiplication
+$basefont-px: $basefont*1px;  // = 20px;
+
+// Conversion to percentages using multiplication
+$column-width: ($column-width-px/($total-width-px/100))*1%;  // = 6.159110351%;
+ */
+
+$column-base: 12;
+$minimum-grid-width: 250px;
+
+
+$grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl:
+1400px );
+
+/**Grid
+   Utility Classes
+  Inspiration from this - https://induro.io/blog/2018/10/grid_layout_utility/
+ */
+.grid{
+  display: grid;
+  grid-column-gap: 0;
+  grid-row-gap: 0;display: grid;/* grid-template-columns: 100px 100px 100px; */
+}
+
+
+.grid-col-auto{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($minimum-grid-width, 1fr) ) ;
+  grid-gap: 2rem;
+  padding: 2rem;
+}
+
+.grid div, .grid section, .grid article{
+  padding: 1rem;
+}
+
+@for $i from 1 through $column-base {
+  $index: $i;
+  .grid-c#{$index}, .grid-columns-#{$index} {
+  //grid-template-columns: repeat($i, minmax($minimum-grid-width, 1fr) );
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax($minimum-grid-width, 1fr) );
+  grid-column-gap: 0;
+    grid-row-gap: 0;
+    // minmax(0, #{$i}fr
+}
+  .col-span-#{$index} {
+    grid-column-end: $i;
+  }
+
+  .col-start-#{$index} {
+    grid-column-start: $i;
+  }
+
+  .grid-rows-#{$index} {
+    grid-template-rows: repeat($i, minmax(0, 1fr));
+  }
+
+  .row-span-#{$index} {
+    grid-row: span $i / span $i;
+  }
+
+  .row-start-#{$index} {
+   grid-row-start: $i;
+  }
+}
+
+.grid-cols-none {
+  grid-template-columns: none;
+}
+
+.col-start-auto	{
+  grid-column-start: auto;
+}
+
+.col-auto{
+  grid-column: auto;
+}
+
+.col-end-auto{
+  grid-column-end: auto;
+}
+
+.grid-rows-none	{grid-template-rows: none};
+
+.row-auto {grid-row: auto;}
+
+.row-start-auto {
+  grid-row-start: auto;
+}
+
+.row-end-auto { grid-row-end: auto};
+
+
+.gap-0	{gap: 0;}
+.gap-1	{gap: 0.25rem;}
+.gap-2	{gap: 0.5rem;}
+.gap-3	{gap: 0.75rem;}
+.gap-4	{gap: 1rem;}
+.gap-5	{gap: 1.25rem;}
+.gap-6	{gap: 1.5rem;}
+.gap-8	{gap: 2rem;}
+.gap-10	{gap: 2.5rem;}
+.gap-12	{gap: 3rem;}
+.gap-16	{gap: 4rem;}
+.gap-20	{gap: 5rem;}
+.gap-24	{gap: 6rem;}
+.gap-32	{gap: 8rem;}
+.gap-40	{gap: 10rem;}
+.gap-48	{gap: 12rem;}
+.gap-56	{gap: 14rem;}
+.gap-64	{gap: 16rem;}
+.gap-px	{gap: 1px;}
+.row-gap-0 {row-gap: 0;}
+.row-gap-1 {row-gap: 0.25rem;}
+.row-gap-2  {row-gap: 0.5rem;}
+.row-gap-3  {row-gap: 0.75rem;}
+.row-gap-4  {row-gap: 1rem;}
+.row-gap-5  {row-gap: 1.25rem;}
+.row-gap-6	{row-gap: 1.5rem;}
+.row-gap-8	{row-gap: 2rem;}
+.row-gap-10	{row-gap: 2.5rem;}
+.row-gap-12	{row-gap: 3rem;}
+.row-gap-16	{row-gap: 4rem;}
+.row-gap-20	{row-gap: 5rem;}
+.row-gap-24	{row-gap: 6rem;}
+.row-gap-32	{row-gap: 8rem;}
+.row-gap-40	{row-gap: 10rem;}
+.row-gap-48	{row-gap: 12rem;}
+.row-gap-56	{row-gap: 14rem;}
+.row-gap-64	{row-gap: 16rem;}
+.row-gap-px	{row-gap: 1px;}
+.col-gap-0	{column-gap: 0;}
+.col-gap-1	{column-gap: 0.25rem;}
+.col-gap-2	{column-gap: 0.5rem;}
+.col-gap-3	{column-gap: 0.75rem;}
+.col-gap-4	{column-gap: 1rem;}
+.col-gap-5	{column-gap: 1.25rem;}
+.col-gap-6	{column-gap: 1.5rem;}
+.col-gap-8	{column-gap: 2rem;}
+.col-gap-10	{column-gap: 2.5rem;}
+.col-gap-12	{column-gap: 3rem;}
+.col-gap-16	{column-gap: 4rem;}
+.col-gap-20	{column-gap: 5rem;}
+.col-gap-24	{column-gap: 6rem;}
+.col-gap-32	{column-gap: 8rem;}
+.col-gap-40	{column-gap: 10rem;}
+.col-gap-48	{column-gap: 12rem;}
+.col-gap-56	{column-gap: 14rem;}
+.col-gap-64	{column-gap: 16rem;}
+.col-gap-px	{column-gap: 1px;}
+
+
+// Breakpoint viewport sizes and media queries.
+//
+// Breakpoints are defined as a map of (name: minimum width), order from small to large:
+//
+//    (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)
+//
+// The map defined in the `$grid-breakpoints` global variable is used as the `$breakpoints` argument by default.
+
+// Name of the next breakpoint, or null for the last breakpoint.
+//
+//    >> breakpoint-next(sm)
+//    md
+//    >> breakpoint-next(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    md
+//    >> breakpoint-next(sm, $breakpoint-names: (xs sm md lg xl))
+//    md
+@function breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
+  $n: index($breakpoint-names, $name);
+  @if not $n {
+    @error "breakpoint `#{$name}` not found in `#{$breakpoints}`";
+  }
+  @return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
+}
+
+// Minimum breakpoint width. Null for the smallest (first) breakpoint.
+//
+//    >> breakpoint-min(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    576px
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+  $min: map-get($breakpoints, $name);
+  @return if($min != 0, $min, null);
+}
+
+// Maximum breakpoint width.
+// The maximum value is reduced by 0.02px to work around the limitations of
+// `min-` and `max-` prefixes and viewports with fractional widths.
+// See https://www.w3.org/TR/mediaqueries-4/#mq-min-max
+// Uses 0.02px rather than 0.01px to work around a current rounding bug in Safari.
+// See https://bugs.webkit.org/show_bug.cgi?id=178261
+//
+//    >> breakpoint-max(md, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    767.98px
+@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
+  $max: map-get($breakpoints, $name);
+  @return if($max and $max > 0, $max - .02, null);
+}
+
+// Returns a blank string if smallest breakpoint, otherwise returns the name with a dash in front.
+// Useful for making responsive utilities.
+//
+//    >> breakpoint-infix(xs, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    ""  (Returns a blank string)
+//    >> breakpoint-infix(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    "-sm"
+@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
+  @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
+}
+
+// Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
+// Makes the @content apply to the given breakpoint and wider.
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// Media of at most the maximum breakpoint width. No query for the largest breakpoint.
+// Makes the @content apply to the given breakpoint and narrower.
+@mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
+  $max: breakpoint-max($name, $breakpoints);
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// Media that spans multiple breakpoint widths.
+// Makes the @content apply between the min and max breakpoints
+@mixin media-breakpoint-between($lower, $upper, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($lower, $breakpoints);
+  $max: breakpoint-max($upper, $breakpoints);
+
+  @if $min != null and $max != null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if $max == null {
+    @include media-breakpoint-up($lower, $breakpoints) {
+      @content;
+    }
+  } @else if $min == null {
+    @include media-breakpoint-down($upper, $breakpoints) {
+      @content;
+    }
+  }
+}
+
+// Media between the breakpoint's minimum and maximum widths.
+// No minimum for the smallest breakpoint, and no maximum for the largest one.
+// Makes the @content apply only to the given breakpoint, not viewports any wider or narrower.
+@mixin media-breakpoint-only($name, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  $max: breakpoint-max(breakpoint-next($name, $breakpoints));
+
+  @if $min != null and $max != null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if $max == null {
+    @include media-breakpoint-up($name, $breakpoints) {
+      @content;
+    }
+  } @else if $min == null {
+    @include media-breakpoint-down($name, $breakpoints) {
+      @content;
+    }
+  }
+}
+

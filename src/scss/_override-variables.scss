@@ -1,0 +1,18 @@
+@use "sass:color";
+
+//
+// Variables
+// -----------------------------------------
+
+//==Colors
+//
+//## Colors
+$navy: #001f3f;
+$navy-highlight: lighten($navy, 10%);
+$navy-lowlight: darken($navy, 10%);
+$navy-complement: complement($navy);
+
+$blue: #0074D9;
+$blue-highlight: lighten($blue, 10%);
+$blue-lowlight: darken($blue, 10%);
+$blue-complement: complement($blue);

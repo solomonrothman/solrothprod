@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+    <!-- Normalize browser element style-->
+    <!-- <link rel=stylesheet href="https://s3-us-west-2.amazonaws.com/colors-css/2.2.0/colors.min.css"> -->
+    <!-- Normlize Broswer Behavior https://necolas.github.io/normalize.css/ -->
+    <link rel="stylesheet" type="text/css" href="css/axiom.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/sol-roth-media.css" media="screen"/>
+    <style>
+
+
+    </style>
+</head>
+<body id="axiom-root">
+<div>
+    <!-- Main divider -->
+    <header>
+        <hgroup>
+            <span>
+            <h1>Axiom <span> A Framework with rules to tame the madness.</span></h1>
+                 <p>Make a website look good as fast as possible with as few entire website look good using ALMOST no custom or utility classes.. How? by following rules for how to place elements and to structure a design. Most of the styling can be inherited and done directly to the elements. This makes it lightning fast and easy to make things look good. Free yourself by following simple rules.</p>
+            </span>
+        </hgroup>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="">Introduction</a></li>
+            <li><a href="">Introduction</a></li>
+            <li><a href="">Design and Framework Rules</a></li>
+            <li><a href="">Hiearchy and Element Specific Rules</a></li>
+            <li><a href="">Examples and Templates</a></li>
+        </ul>
+    </nav>
+
+    <div class="grid-col-auto">
+        <section>
+            <h4>Something here 1</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu diam tellus. Vivamus eu magna laoreet nisi vehicula dignissim. Donec ultricies, ex vel facilisis condimentum, urna diam euismod diam, aliquam interdum lorem sapien vel est. Nunc venenatis dolor sit amet tellus fermentum aliquet. Sed tristique diam non turpis viverra porta. Ut aliquet in nunc at tincidunt. Nullam molestie, magna non viverra aliquam, dui justo volutpat mi, ut pulvinar urna eros vitae quam. In ac eleifend eros. Integer ut odio metus. Nam sagittis, metus at commodo semper, nisi ex gravida elit, quis pretium nulla justo id mi. Nullam semper tellus ut sem maximus, ac semper metus feugiat. Donec quis elementum magna.</p>
+        </section>
+        <section>
+            <h4>Something here 2 Something here 2 Something here 2 Something here 2</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu diam tellus. Vivamus eu magna laoreet nisi vehicula dignissim. Donec ultricies, ex vel facilisis condimentum, urna diam euismod diam, aliquam interdum lorem sapien vel est. Nunc venenatis dolor sit amet tellus fermentum aliquet. Sed tristique diam non turpis viverra porta. Ut aliquet in nunc at tincidunt. Nullam molestie, magna non viverra aliquam, dui justo volutpat mi, ut pulvinar urna eros vitae quam. In ac eleifend eros. Integer ut odio metus. Nam sagittis, metus at commodo semper, nisi ex gravida elit, quis pretium nulla justo id mi. Nullam semper tellus ut sem maximus, ac semper metus feugiat. Donec quis elementum magna.</p>
+        </section>
+        <section>
+            <h4>Something here 3</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu diam tellus. Vivamus eu magna laoreet nisi</p>
+        </section>
+        <section>
+            <h4>Something here 4</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu diam tellus. Vivamus eu magna laoreet nisi</p>
+        </section>
+        <section>
+            <h4>Something here 5</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu diam tellus. Vivamus eu magna laoreet nisi</p>
+        </section>
+        <section><h4>Something here 6</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu diam tellus. Vivamus eu magna laoreet nisi</p>
+        </section>
+    </div>
+
+    <main>
+        <!-- Main Content -->
+
+        <article>
+            <section>
+                <p>
+                    Axiom.
+                    Rules that set you free. The only CSS Framework with rules to tame the madness.
+                    Most CSS frameworks contains tools, but no direction or rules on how and how not to use them. They
+                    follow no standard axioms for design and layout. Axioms are things that are presumed to be tree,
+                    with which other things can be derived or determien through logic. Axiom, is a framework that
+                    provides solid rules and design direction to create a beautiful free experience with extremely easy
+                    to understand clean code.
+                </p>
+            </section>
+            <section>
+                <h2>Design and Framework Rules</h2>
+                <ul>
+                    <li>Elements can contain like elements or any element father down the Axiom Element Heirarchy Tree,
+                        but elements CAN NOT contain elements higher up ont he hierachy. For example containers can
+                        contain other containers or wrappers, but wrappers can not have containers in them.
+                    </li>
+                    <li>Behaviors should dictate class names</li>
+                    <li>Minimalism Additions to should be added for custimizations, not overriding or changing values.
+                    </li>
+                    <li>Default classes and styles should work directly on the elements and not require presentational
+                        classes
+                    </li>
+                    <li>If html can't be changed, then the class "section" or "article" or the geneic content should be
+                        applied to all content.
+                    </li>
+                    <li> Div are only used for containers of content, no content should ever be in a div alone. This
+                        provides much needed consistency of what contains content adn what contains display, wrapper and
+                        design elements.
+                    </li>
+                    <li>The main element containg the application is the root pipe. all elements must be contained with
+                        the root pipe. Nothing should be outside of the root pipe, it should be 100% fully container.
+                    </li>
+                    <li>A singleton Object should contain the basic JS logic for the ENTIRE site. Calls for components
+                        and other things, should be generated from this single object.
+                    </li>
+                    <li>All buttons are assumed to be primary, no designation for default. No extra code for defaults.
+                        Everything is relative to the tree default.
+                    </li>
+                    <li>All like elements (structure) should have the EXACT same horizontal and vertical alignment.
+                        Extra classes should be used to adjust the default alignment. (divs, articles, etc etc)
+                    </li>
+                    <ul>
+                        All sites must contain at least one div. The grid is applied to the body element, so one div is required.
+                    </ul>
+                </ul>
+
+            </section>
+            <section>
+                <h2>Hierachy and Element Specific Rules</h2>
+                <ul>
+                    <li>
+                        <strong>Dividers (Layout and programatic sectioning)</strong>
+                        <ul>
+                            <li>Dividers should not directly contain content, they should contain other dividers or
+                                containers. They should be grid, flexbox or block display.
+                            </li>
+                            <ul><strong>Sample Element List</strong>
+                                <li>&lt; div &gt;</li>
+                                <li>&lt; main &gt;</li>
+                                <li>&lt; footer &gt;</li>
+                                <li>&lt; nav &gt;</li>
+                                <li>&lt; header &gt;</li>
+                            </ul>
+                        </ul>
+
+                    </li>
+                    <li>
+                        <strong>Containers (Large Content and content sectioning)</strong>
+                        <ul>
+                            <li> All containers should be block display, or inline-block display. When possible content
+                                sectioning should be used for containers and all related styles should use the root
+                                content element
+                            </li>
+                            <ul><strong>Sample Element List</strong>
+                                <em>content sectioning elements - non-exhaustive list</em>
+                                <li>&lt; address &gt;</li>
+                                <li>&lt; article &gt;</li>
+                                <li>&lt; aside &gt;</li>
+                                <li>&lt; section &gt;</li>
+                                <li>&lt; form &gt;</li>
+                            </ul>
+                        </ul>
+                    </li>
+                    <li><strong>Wrappers (individual disable items - content, style and misc) </strong>
+                        <ul>
+                            <li>All wrappers should be inline display or no display property (default).</li>
+                            <ul><strong>Sample Element List</strong>
+                                <li>&lt; span &gt;</li>
+
+                            </ul>
+                        </ul>
+                    </li>
+                    <li><strong>Content</strong>
+                        Everything that's not a divider, wrapper or container.
+                        <ul><strong>Sample Element List</strong>
+                            <li>&lt; table &gt;</li>
+                            <li>&lt; p &gt;</li>
+                            <li>&lt; a &gt;</li>
+                            <li>&lt; h1 &gt; - &lt; h6 &gt;</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2>Typography</h2>
+                <p>Matching Typography for header sizes, makes a consistent size/font and spacing for elements.</p>
+                The .h1 – .h8 font-size utilities can be used to override an element’s default size.
+
+            </section>
+            <section class="multi-column">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempus quis eros vel vestibulum.
+                    Nulla mollis diam non dui fringilla, id consectetur leo pulvinar. Proin consectetur purus eget risus
+                    luctus pretium. Phasellus magna erat, consequat ut consequat vitae, commodo sed velit. Quisque et
+                    cursus erat, ac hendrerit lacus. Quisque molestie turpis id tortor convallis rutrum. Quisque nec
+                    nulla non ex rhoncus aliquam. Nam ut aliquet augue. Vivamus ipsum orci, dignissim eget libero vitae,
+                    tristique molestie eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                    inceptos himenaeos. Suspendisse in nulla diam.</p>
+
+                <p>Mauris ullamcorper leo vitae pulvinar tincidunt. Fusce nibh dolor, mattis sit amet aliquet sed,
+                    bibendum eget odio. Nam eget purus est. Nunc quis nulla maximus orci hendrerit feugiat id sit amet
+                    odio. Mauris lorem sem, suscipit id risus id, dignissim efficitur tellus. Praesent in commodo
+                    tortor. Vivamus mattis vestibulum metus. Nullam eget quam vestibulum, accumsan velit in, tincidunt
+                    tortor. Suspendisse rhoncus neque turpis, et placerat libero condimentum vitae.</p>
+
+                <p>Nulla neque leo, tincidunt et augue feugiat, hendrerit maximus urna. Nullam ac vulputate diam. Proin
+                    eget nisl lacinia odio dignissim blandit. Vestibulum pretium consequat justo. Mauris sapien purus,
+                    laoreet sit amet metus a, scelerisque posuere sapien. Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Integer fringilla dui maximus arcu rhoncus vehicula. Curabitur dolor lorem,
+                    facilisis eget malesuada ut, consectetur at massa. Morbi faucibus tortor et magna pellentesque, at
+                    laoreet purus consectetur. Pellentesque quam leo, auctor sit amet justo ac, vulputate rhoncus orci.
+                    Vivamus ut feugiat dui, sit amet scelerisque eros.</p>
+
+                <p>Nam laoreet turpis sit amet tempor ullamcorper. Integer convallis felis nec neque commodo posuere.
+                    Aenean vel porta arcu. Nullam non diam tellus. Phasellus dapibus eros in tellus posuere imperdiet.
+                    Suspendisse et suscipit urna. Vestibulum quis neque in sem efficitur eleifend ut eget lacus. Aliquam
+                    posuere ex in dapibus vulputate. Morbi dictum est mi. Nulla eu ex vel ex lacinia porta in iaculis
+                    tortor. Donec viverra neque justo, ac porta tellus porta iaculis. Interdum et malesuada fames ac
+                    ante ipsum primis in faucibus. Praesent eros augue, posuere sed ex et, fringilla rutrum orci.
+                    Vivamus dapibus sed odio et mollis.</p>
+
+                <p>Praesent in leo eu nisi volutpat scelerisque eget quis lectus. Donec sapien ex, tristique quis
+                    volutpat at, finibus eu lacus. Aenean sodales, ipsum ut venenatis pharetra, ipsum mi pretium ipsum,
+                    sit amet aliquam odio dolor vitae libero. Sed velit lectus, pharetra ac augue sit amet, mollis
+                    pretium libero. Nulla a finibus tortor, at malesuada ex. In aliquet lacus eu porta pellentesque.
+                    Donec vitae nisl nisl. Nunc hendrerit varius mi nec mollis. Nullam congue augue metus, ut ultricies
+                    arcu ultricies pulvinar. Maecenas mattis felis sit amet turpis commodo maximus. Aenean id neque eget
+                    quam tristique eleifend eget nec metus.</p>
+            </section>
+            <section></section>
+        </article>
+
+
+        <article>
+            <h2 class="h1">Content</h2>
+
+            <h2>Typography</h2>
+
+            <!-- Standard Headings -->
+            <h1>H1 Heading or .h1 class <span>Span Inside H1</span></h1>
+            <h2>H2 Heading or .h2 class <span>Span Inside H2</span></h2>
+            <h3>H3 Heading or .h3 class <span>Span Inside H2</span></h3>
+            <h4>H4 Heading or .h4 class <span>Span Inside H4</span></h4>
+            <h5>H5 Heading or .h5 class <span>Span Inside H5</span></h5>
+            <h6>H6 Heading or .h6 class <span>Span Inside H6</span></h6>
+
+            <!-- Base type size -->
+            <p>The base type is 15px over 1.6 line height (24px)</p>
+
+            <!-- Other styled text tags -->
+            <strong>Bolded</strong>
+            <em>Italicized</em>
+            <a>Colored</a>
+            <u>Underlined</u>
+
+
+
+        </article>
+
+        <article>
+            <h2>Buttons</h2>
+
+            <!-- Standard buttons -->
+            <a class="button" href="#">Anchor button</a>
+            <button>Button element</button>
+            <input type="submit" value="submit input">
+            <input type="button" value="button input">
+
+        </article>
+
+        <article>
+            <h2>Forms</h2>
+            <!-- The above form looks like this -->
+            <form>
+                <div class="row">
+                    <div class="six columns">
+                        <label for="exampleEmailInput">Your email</label>
+                        <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
+                    </div>
+                    <div class="six columns">
+                        <label for="exampleRecipientInput">Reason for contacting</label>
+                        <select class="u-full-width" id="exampleRecipientInput">
+                            <option value="Option 1">Questions</option>
+                            <option value="Option 2">Admiration</option>
+                            <option value="Option 3">Can I get your number?</option>
+                        </select>
+                    </div>
+                </div>
+                <label for="exampleMessage">Message</label>
+                <textarea class="u-full-width" placeholder="Hi Dave …" id="exampleMessage"></textarea>
+                <label class="example-send-yourself-copy">
+                    <input type="checkbox">
+                    <span class="label-body">Send a copy to yourself</span>
+                </label>
+                <input class="button-primary" type="submit" value="Submit">
+            </form>
+
+            <!-- Always wrap checkbox and radio inputs in a label and use a <span class="label-body"> inside of it -->
+
+            <!-- Note: The class .u-full-width is just a utility class shorthand for width: 100% -->
+        </article>
+
+        <article>
+            <h2>Lists</h2>
+            <ul>
+                <li>Item 1</li>
+                <li>
+                    Item 2
+                    <ul>
+                        <li>Item 2.1
+                            <ul>
+                                <li>Item 3.1</li>
+                                <li>Item 3.2</li>
+                            </ul>
+                        </li>
+                        <li>Item 2.2</li>
+                    </ul>
+                </li>
+                <li>Item 3</li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>Code</h2>
+            <pre><code>.some-class {
+  background-color: red;
+}</code></pre>
+
+            <!-- Remember every whitespace and break will be preserved in a <pre>, including indentation in your code -->
+
+        </article>
+
+        <article>
+            <h2>Table</h2>
+            <table class="u-full-width">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Sex</th>
+                    <th>Location</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Dave Gamache</td>
+                    <td>26</td>
+                    <td>Male</td>
+                    <td>San Francisco</td>
+                </tr>
+                <tr>
+                    <td>Dwayne Johnson</td>
+                    <td>42</td>
+                    <td>Male</td>
+                    <td>Hayward</td>
+                </tr>
+                </tbody>
+            </table>
+        </article>
+
+    </main>
+
+
+
+
+</div>
+
+<div>
+    <aside>
+        This project used inspiration, code and downright "stole" from these other projects. Special thanks to them -
+        <ul>
+            <li><a href="https://basscss.com/">Basscss - Low-Level CSS Toolkit</a></li>
+        </ul>
+    </aside>
+
+    Break points are stolen from Bootstrap 5 - https://v5.getbootstrap.com/docs/5.0/layout/breakpoints/
+
+
+</div>
+
+<footer>
+
+</footer>
+
+</body>
+</html>

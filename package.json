@@ -1,0 +1,33 @@
+{
+  "name": "axiom-space",
+  "version": "1.0.0",
+  "description": "A front end framework with rules to tame the madness.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:sass": "npm-sass source/scss/axiom-styles.scss > css/axiom.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solomonrothman/axiom.git"
+  },
+  "keywords": [
+    "css",
+    "framework"
+  ],
+  "author": "Solomon Rothman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/solomonrothman/axiom/issues"
+  },
+  "homepage": "https://github.com/solomonrothman/axiom#readme",
+  "dependencies": {
+    "autoprefixer": "^10.2.5",
+    "cssnano": "^5.0.2",
+    "node-sass": "^4.14.1",
+    "normalize.css": "^8.0.1",
+    "npm-sass": "^2.3.0",
+    "uglify-js": "^3.10.0",
+    "watch": "^1.0.2"
+  }
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+    <!-- Normalize browser element style-->
+    <!-- <link rel=stylesheet href="https://s3-us-west-2.amazonaws.com/colors-css/2.2.0/colors.min.css"> -->
+    <!-- Normlize Broswer Behavior https://necolas.github.io/normalize.css/ -->
+    <link rel="stylesheet" type="text/css" href="css/axiom.css" media="screen"/>
+    <style>
+        .hd-3col-ft {
+            display: grid;
+            /*grid-template-columns: repeat(12, 1fr);
+            /* grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)*/
+            grid-auto-rows: auto 1fr auto;
+            grid-template-areas:
+                "hd hd hd hd hd hd hd hd hd hd hd hd"
+                "col1 col1 col1 col2 col2 col2 col2 col2 col2 col2 col3 col3"
+                "ft ft ft ft ft ft ft ft ft ft ft ft";
+            height: 100vh;
+            /** width: 100vw; */
+            grid-gap: 1rem;
+        }
+
+        .hd-2col-ft{
+
+        }
+
+        .hd-1col-ft{
+
+        }
+
+
+
+        .header, header {
+            grid-area: hd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer, footer {
+            grid-area: ft;
+        }
+
+        main, .content {
+            grid-area: col2;
+        }
+
+        .col1, .hd-3col-ft aside:first-of-type {
+            grid-area: col1;
+        }
+
+        .col3, .hd-3col-ft aside:last-of-type{
+            grid-area: col3;
+        }
+
+        .g-unset{
+            grid-area: unset;
+        }
+
+        footer{
+            text-align: center;
+        }
+
+
+        .hd-3col-ft  > div.overlay {
+            z-index: 10;
+            grid-column: col2-start / col3-end;
+            grid-row: hd-start / ft-end;
+            border: 4px solid rgb(92,148,13);
+            background-color: rgba(92,148,13,.4);
+            color: rgb(92,148,13);
+            font-size: 150%;
+        }
+
+    </style>
+
+    <script src="//kit.fontawesome.com/ff90df295a.js" crossorigin="anonymous"></script>
+    <script src="./js/axiom.js"  type="module"></script>
+
+</head>
+<body>
+
+<nav>
+    <a href=""><i class="fas fa-link">search</i>Search Icon on Left</a>
+    <a href="">Search Icon on Right<i class="fas fa-link">search</i></a>
+</nav>
+
+<div class="hd-3col-ft">
+    <header>
+            <span>
+            <h1>Axiom UI<span> A framework with rules to tame the madness.</span></h1>
+                 <p>Make a website look good as fast as possible with as few entire website look good using ALMOST no custom or utility classes.. How? by following rules for how to place elements and to structure a design. Most of the styling can be inherited and done directly to the elements. This makes it lightning fast and easy to make things look good. Free yourself by following simple rules.</p>
+            </span>
+        <!-- nav in header will be app bar style
+        <nav>
+            <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            </ul>
+        </nav>
+        -->
+    </header>
+    <aside>Col 1 Sidebar Nav
+        <nav>
+            <ul>
+                <li><a href="">Introduction</a></li>
+                <li><a href="">Introduction</a></li>
+                <li><a href="">Design and Framework Rules</a></li>
+                <li><a href="">Hiearchy and Element Specific Rules</a></li>
+                <li><a href="">Examples and Templates</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <article>
+
+            <div class="collapse-wrapper">
+            <a class="collapse-trigger">First Trigger Collapse</a>
+            <div class="collapse-target" data-collapsed="1">
+                First Trigger Collapse Text
+                <p>Aliquam at maximus orci, eget feugiat neque. Donec ante mi, bibendum a libero nec, varius feugiat dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dui ante, finibus et eros sed, auctor tincidunt nisl. Quisque sed ipsum felis. Curabitur hendrerit porttitor viverra. Praesent dolor felis, ultrices a eleifend in, volutpat elementum purus. Fusce malesuada, arcu a interdum finibus, orci ipsum suscipit nibh, ac vehicula ex justo vitae lacus. Aenean velit nulla, blandit et tellus quis, iaculis ullamcorper neque. Proin vitae sapien quis velit imperdiet vehicula ut id lacus. Quisque sagittis molestie posuere. Donec quis tristique ante, sed lacinia tellus. Aliquam lacinia, risus ac interdum tempus, massa mi cursus magna, in vestibulum arcu leo vitae arcu.</p>
+                <p>Aliquam at maximus orci, eget feugiat neque. Donec ante mi, bibendum a libero nec, varius feugiat dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dui ante, finibus et eros sed, auctor tincidunt nisl. Quisque sed ipsum felis. Curabitur hendrerit porttitor viverra. Praesent dolor felis, ultrices a eleifend in, volutpat elementum purus. Fusce malesuada, arcu a interdum finibus, orci ipsum suscipit nibh, ac vehicula ex justo vitae lacus. Aenean velit nulla, blandit et tellus quis, iaculis ullamcorper neque. Proin vitae sapien quis velit imperdiet vehicula ut id lacus. Quisque sagittis molestie posuere. Donec quis tristique ante, sed lacinia tellus. Aliquam lacinia, risus ac interdum tempus, massa mi cursus magna, in vestibulum arcu leo vitae arcu.</p>
+            </div>
+            </div>
+
+            <h2>Main Col2 Content - Article Form.</h2>
+            <p>Aliquam at maximus orci, eget feugiat neque. Donec ante mi, bibendum a libero nec, varius feugiat dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dui ante, finibus et eros sed, auctor tincidunt nisl. Quisque sed ipsum felis. Curabitur hendrerit porttitor viverra. Praesent dolor felis, ultrices a eleifend in, volutpat elementum purus. Fusce malesuada, arcu a interdum finibus, orci ipsum suscipit nibh, ac vehicula ex justo vitae lacus. Aenean velit nulla, blandit et tellus quis, iaculis ullamcorper neque. Proin vitae sapien quis velit imperdiet vehicula ut id lacus. Quisque sagittis molestie posuere. Donec quis tristique ante, sed lacinia tellus. Aliquam lacinia, risus ac interdum tempus, massa mi cursus magna, in vestibulum arcu leo vitae arcu.</p>
+
+            <div class="collapse-wrapper">
+                <a class="collapse-trigger">Second Trigger Collapse</a>
+                <div class="collapse-target" data-collapsed="0">
+                Second Trigger text
+                <p>Aliquam at maximus orci, eget feugiat neque. Donec ante mi, bibendum a libero nec, varius feugiat dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dui ante, finibus et eros sed, auctor tincidunt nisl. Quisque sed ipsum felis. Curabitur hendrerit porttitor viverra. Praesent dolor felis, ultrices a eleifend in, volutpat elementum purus. Fusce malesuada, arcu a interdum finibus, orci ipsum suscipit nibh, ac vehicula ex justo vitae lacus. Aenean velit nulla, blandit et tellus quis, iaculis ullamcorper neque. Proin vitae sapien quis velit imperdiet vehicula ut id lacus. Quisque sagittis molestie posuere. Donec quis tristique ante, sed lacinia tellus. Aliquam lacinia, risus ac interdum tempus, massa mi cursus magna, in vestibulum arcu leo vitae arcu.</p>
+                <p>Aliquam at maximus orci, eget feugiat neque. Donec ante mi, bibendum a libero nec, varius feugiat dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dui ante, finibus et eros sed, auctor tincidunt nisl. Quisque sed ipsum felis. Curabitur hendrerit porttitor viverra. Praesent dolor felis, ultrices a eleifend in, volutpat elementum purus. Fusce malesuada, arcu a interdum finibus, orci ipsum suscipit nibh, ac vehicula ex justo vitae lacus. Aenean velit nulla, blandit et tellus quis, iaculis ullamcorper neque. Proin vitae sapien quis velit imperdiet vehicula ut id lacus. Quisque sagittis molestie posuere. Donec quis tristique ante, sed lacinia tellus. Aliquam lacinia, risus ac interdum tempus, massa mi cursus magna, in vestibulum arcu leo vitae arcu.</p>
+                </div>
+            </div>
+
+        </article>
+    </main>
+    <aside>Col 3
+        adfsasdflajsdf;l aopsdfjoadsjf ;lasdjfa
+        sdfljasdflajsdfljas
+        dfljasdflkasjdflkjasdf
+        alsdjflkasjdf
+        as alskdjflkasjdf
+        a lasdfjlkasdjf
+    </aside>
+    <footer>
+        Footer
+    </footer>
+</div>
+
+<!--
+<div class="hd-ft-3col">
+    <header>Header</header>
+    <aside>Col 1</aside>
+    <main>Col 2</main>
+    <aside>Col 3</aside>
+    <footer>Footer</footer>
+</div>
+-->
+
+
+</body>
+</html>

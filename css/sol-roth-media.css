@@ -1,0 +1,91 @@
+/* Headers */
+.header-image{
+  background-image: url("../img/website/SR-Header.png");
+  background-position-y: top;
+  background-size: cover;
+  min-height: 230px;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-color: black;
+}
+
+.sr-fit-header{
+  background-image: url("../img/website/SR-fit-banner.png");
+  background-position-y: top;
+  background-size: cover;
+  min-height: 230px;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-color: black;
+  max-width: 100%;
+}
+
+
+.sr-contact-header{
+  background-image: url("../img/website/SR-Los-Angeles.png");
+  background-position-y: top;
+  background-size: cover;
+  min-height: 230px;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-color: black;
+  max-width: 100%;
+}
+
+.sr-header{
+  background-image: url("../img/website/SR-personal.png");
+  background-position-y: top;
+  background-size: cover;
+  min-height: 230px;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-color: black;
+  max-width: 100%;
+  /*    border-top: 10px;
+        border-top-style: solid;
+        border-top-color: #2d2d2d;
+
+   */
+}
+
+.sr-filmmaking-header{
+  background-image: url("../img/website/SR-filmmaking.png");
+  background-position-y: top;
+  background-size: cover;
+  min-height: 230px;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-color: black;
+  max-width: 100%;
+}
+
+.sr-company-header{
+
+}
+
+main article, .container-fixed{
+  padding: 10px;
+  max-width: 660px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+article .full{
+  max-width: 100%;
+}
+
+footer{
+  border-top-width: 1px;
+  border-top-color: grey;
+  border-top-style: solid;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.highlight-header{
+  padding-top: 10px;
+  text-align: left;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
